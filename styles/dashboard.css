@@ -1,0 +1,556 @@
+@import "./partials/colors.css";
+@import "./partials/global.css";
+
+/* header */
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.header:hover > .user-area {
+  background-color: #10101038;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.user-area__info {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user-area__avatar {
+  border-radius: 8px;
+  border: 2px solid var(--text-secondary-color);
+}
+
+.user-area__info__name {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-secondary-color);
+}
+
+.user-area__info__greeting {
+  font-weight: 300;
+}
+
+.user-menu {
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--color-white);
+  top: 4.6875rem;
+  left: 9.375rem;
+  border-radius: 8px;
+}
+
+.bg-menu {
+  position: fixed;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-white);
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.bg-menu__item {
+  background-color: transparent;
+  margin: 0.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.user-menu__settings,
+.user-menu__logout {
+  background-color: transparent;
+  border-radius: 8px;
+  margin: 0.5rem;
+  padding: 0.3125rem 1.25rem;
+}
+
+.user-menu__settings {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+
+.user-menu__logout:hover,
+.bg-menu__item:hover {
+  background-color: #16161717;
+}
+
+.user-menu__divider::before {
+  content: "";
+  border-bottom: 1px solid #000;
+  display: block;
+}
+
+.fa-caret-down,
+.fa-caret-up {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary-color);
+}
+
+/* main */
+.main {
+  margin: 1rem auto;
+  text-align: center;
+  color: var(--text-secondary-color);
+  line-height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .main {
+    line-height: 4.5rem;
+  }
+}
+
+/* laoder */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  margin: auto;
+}
+
+.loader__content {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -150%);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  padding: 2rem 1rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .loader__content {
+    width: 30rem;
+    height: 15rem;
+    padding: 2.5rem 5.5rem;
+  }
+}
+
+.loader__icon {
+  width: 4rem;
+  margin-bottom: 1rem;
+}
+
+.loader__title {
+  font-weight: 600;
+}
+
+.loader__text {
+  font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+  .loader__text {
+    font-size: 0.9rem;
+  }
+}
+
+/* clock */
+.clock__date {
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+
+
+/* clock timer */
+
+.clock__timer,
+.clock__divider {
+  font-size: 3rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .clock__timer,
+  .clock__divider {
+    font-size: 5.5rem;
+    font-weight: 600;
+  }
+}
+
+.clock__divider {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.clock__divider__circle {
+  border-radius: 50%;
+  background-color: var(--text-secondary-color);
+  height: 0.6rem;
+  width: 0.6rem;
+}
+
+/* see all buttons */
+.button__see-all {
+  width: fit-content;
+  border-radius: 16px;
+  padding: 0.5rem 3rem;
+  font-weight: 400;
+  transition: 0.5s all;
+  background-color: var(--text-secondary-color);
+  border: none;
+}
+
+.button__see-all:hover {
+  background-color: #ffffffe0;
+}
+
+/* todos cards */
+.todos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
+
+.todos__tasks,
+.todos__exams {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-height: 70vh;
+  overflow-y: scroll;
+  padding-bottom: 12rem;
+}
+
+.todos__exams::-webkit-scrollbar,
+.todos__tasks::-webkit-scrollbar {
+  display: none;
+}
+
+.task,
+.exam {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  border-radius: 16px;
+  background-color: var(--text-secondary-color);
+  padding: 1.25rem;
+}
+
+.button__add-todo {
+  background-color: var(--text-secondary-color);
+  margin-top: 1rem;
+}
+
+.button__add-todo:hover {
+  background-color: rgb(209, 209, 209);
+}
+
+.button__add-todo > i {
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+.task--starter,
+.exam--starter {
+  min-height: 11rem;
+}
+
+.task--preview {
+  max-height: 15rem;
+}
+
+.exam--finished {
+  position: relative;
+  min-height: 12rem;
+}
+.exam--finished > i.fa-solid.fa-x {
+  right: 1.35rem;
+}
+
+.exam--preview {
+  min-height: 7rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.exam--preview:hover {
+  box-shadow: 0 5px 5px 0px var(--divider-color);
+  background-color: rgb(209, 209, 209);
+}
+
+.task__icon,
+.exam__icon {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  border-radius: 20px;
+}
+
+.exam.exam--preview > .exam__icon {
+  margin: auto 1rem;
+}
+
+.task__button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.exam__info,
+.task__info {
+  display: flex;
+  color: var(--text-color);
+  line-height: 1.25rem;
+  text-align: left;
+  padding: 0.35rem 1.5rem 0 0;
+}
+
+.exam--finished > .exam__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exam__header {
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 2rem 0.5rem 2rem;
+}
+
+.exam--finished {
+  padding: 0;
+}
+
+.exam__guess-wrapper,
+.exam__guess-button-wrapper {
+  display: flex;
+}
+
+.exam__guess-button-wrapper {
+  flex: 1;
+  gap: 1rem;
+}
+
+.exam__guess-wrapper {
+  border-top: 1px solid var(--divider-color);
+  padding: 1rem 2.25rem 1.25rem 2.25rem;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.exam__guess-result {
+  color: var(--text-color);
+  flex-grow: 1;
+  margin: auto;
+}
+
+.exam__guess-text {
+  margin: auto;
+  text-align: left;
+  flex: 1;
+}
+.exam__guess-button {
+  padding: 0.2rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: 2px solid var(--divider-color);
+  background-color: transparent;
+}
+.exam__guess-button:hover {
+  background-color: #ffffff6e;
+}
+
+.exam--preview > .exam__info p,
+.exam--finished > .exam__container > .exam__header > .exam__info p {
+  min-width: calc(100% / 3.3);
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.exam--finished > .exam__container > .exam__header {
+  align-items: center;
+}
+
+.task--preview > .task__info,
+.task--starter > .task__info,
+.exam--preview > .exam__info,
+.exam--starter > .exam__info {
+  flex-direction: column;
+  align-items: start;
+}
+
+.exam.exam--preview > .exam__info {
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: center;
+  padding-right: 2rem;
+  padding-top: 0;
+}
+
+.exam__info div::before {
+  content: "";
+  border: 1px solid var(--divider-color);
+  
+}
+
+.fa-light.fa-plus {
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+/* task */
+.task__title,
+.exam__title,
+.exam__name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.task__description,
+.exam__description {
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.task__description__text {
+  font-weight: 600;
+}
+
+.exam__name--bold,
+.exam__title__type {
+  font-weight: 600;
+}
+
+/* close button */
+.fa-solid.fa-x {
+  position: absolute;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: 0.5s all;
+  font-size: 0.85rem;
+}
+
+/* X-icon for exam-prev */
+.exam--preview > .fa-solid.fa-x,
+.task--preview > .fa-solid.fa-x {
+  right: 1.35rem;
+}
+
+.exam--preview > .fa-solid.fa-x {
+  top: 37.5%;
+}
+
+.exam--finished > .fa-solid.fa-x {
+  top: 15.5%;
+}
+
+.fa-solid.fa-x:hover {
+  background-color: #33333342;
+}
+
+.button__cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: transparent;
+  outline: 1px solid #1616171e;
+  font-size: 0.9063rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.button__cta:hover {
+  background-color: #16161717;
+}
+
+.task__due {
+  margin: 1rem auto 0 auto;
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+
+.exam__due {
+  font-weight: 200;
+  font-size: 0.75rem;
+}
+
+.task__due--finished,
+.exam__due--finished {
+  text-decoration: underline;
+}
+
+.task__due__text,
+.exam__due__text {
+  font-weight: 700;
+}
+
+/* icon set */
+.icon-set {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  width: 100%;
+  height: 11rem;
+  bottom: -4rem;
+  border: 3px solid var(--text-secondary-color);
+  justify-content: center;
+  border-radius: 40px;
+  background-color: #ffffff4b;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
+.icon-set__icon {
+  margin-top: -2.75rem;
+  border-radius: 16px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.icon-set__icon.active {
+  transform: translateY(-15px);
+}
+
+.icon-set__icon:hover {
+  transform: translateY(-30px);
+}
+
+.icon-set__icon:active {
+  transform: scale(0.9);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../../styles/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+    <script type="module" src="../../scripts/login/login.js" defer></script>
+  </head>
+  <body class="container">
+    <main class="login">
+      <h1 class="login__header">Login</h1>
+      <form class="login__form" action="POST">
+        <div class="login__email">
+          <label for="email">Email</label>
+          <input
+            class="input login__email-input"
+            placeholder="Enter Email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="login__password">
+          <label for="password">Password</label>
+          <input
+            class="input login__password-input"
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="password"
+            required
+          />
+          <i class="fa-solid fa-eye" title="Show Password"></i>
+        </div>
+        <button type="submit" class="button--primary">Login now</button>
+      </form>
+    </main>
+  </body>
+</html>

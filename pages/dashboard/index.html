@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../styles/dashboard.css" />
+    <link rel="stylesheet" href="../../styles/modals.css" />
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script type="module" src="../../scripts/dashboard/main.js" defer></script>
+  </head>
+  <body class="container">
+    
+    <header class="header">
+      <div class="user-area" onclick="window._dMenus.createUserMenu()">
+        <img
+          class="user-area__avatar"
+          src="../../assets/svgs/avatar-placeholder.svg"
+          alt=""
+        />
+        <div class="user-area__info">
+          <p class="user-area__info__name">
+            <span class="user-area__info__greeting">Hi, </span> -
+          </p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <!--  Loader-->
+      <div class="loader">
+        <div class="loader__content">
+          <img
+            src="../../assets/svgs/loader-icon.svg"
+            class="loader__icon"
+            alt=""
+          />
+          <p class="loader__title">Loading...</p>
+          <p class="loader__text">
+            Be patient, we’re connecting your database, it may take up to 2
+            minuts
+          </p>
+        </div>
+      </div>
+
+      <!-- Clock -->
+      <section class="clock">
+        <p class="clock__date">-, -</p>
+        <div class="clock__timer">
+          <span class="clock__timer__hour">00</span>:
+          <span class="clock__timer__minue">00</span>:
+          <span class="clock__timer__second">00</span>
+        </div>
+        <div class="clock__divider">
+          <div class="clock__divider__circle"></div>
+          <div class="clock__divider__circle"></div>
+          <div class="clock__divider__circle"></div>
+        </div>
+      </section>
+
+      <!-- Todos -->
+      <section class="todos">
+        <section class="todos__tasks">
+          <!-- Tasks - added through DOM -->
+        </section>
+        <section class="todos__exams">
+          <!-- Exams - added through DOM -->
+        </section>
+      </section>
+    </main>
+    <footer class="icon-set">
+      <a href="https://eclass.yorku.ca/my/" target="_blank"
+        ><img
+          src="../../assets/svgs/moodle.svg"
+          alt="eClass/Moodle icon"
+          class="icon-set__icon"
+      /></a>
+      <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" target="_blank"
+        ><img
+          src="../../assets/svgs/gmail.svg"
+          alt="Gmail icon"
+          class="icon-set__icon"
+      /></a>
+      <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank"
+        ><img
+          src="../../assets/svgs/View Schedule.svg"
+          alt="course schedule icon"
+          class="icon-set__icon"
+      /></a>
+      <a href="https://students.yorku.ca/york-gpa-calculator" target="_blank"
+        ><img
+          src="../../assets/svgs/GPA calculator.svg"
+          alt="GPA calculator icon"
+          class="icon-set__icon"
+      /></a>
+      <a href="https://registrar.yorku.ca/enrol/guide/vsb" target="_blank"
+        ><img
+          src="../../assets/svgs/VSB.svg"
+          alt="virtual schedule builder (VSB) icon"
+          class="icon-set__icon"
+      /></a>
+      <a
+        href="https://registrar.yorku.ca/enrol/dates/2023-2024/fall-winter"
+        target="_blank"
+        ><img
+          src="../../assets/svgs/Important Dates.svg"
+          alt="important dates icon"
+          class="icon-set__icon"
+      /></a>
+    </footer>
+  </body>
+</html>
